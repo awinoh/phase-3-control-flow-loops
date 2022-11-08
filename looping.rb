@@ -1,9 +1,12 @@
+require "pry"
 def happy_new_year
   # your code here
   i = 10
   while i > 0
     puts i
     i -= 1
+  end
+  puts "Happy New Year!"
 end
 
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
@@ -22,7 +25,7 @@ end
 def fizzbuzz_printer
   # your code here
   num = 1
-  while 
+  while
     num < 101
     if num % 3 == 0 && num % 5 == 0
       puts "FizzBuzz"
@@ -36,17 +39,12 @@ def fizzbuzz_printer
     num += 1
   end
 end
+# binding.pry
 
-def reverse_string("hello")
+def reverse_string(str)
   # your code here
-  reverse_string = ''
-  i=0
-  while i < str.length
-    reverse_string = str[i] + reverse_string
-    i += 1
-  end
- 
-  return reverse_string
-  
+  split_str = str.split("")
+  reversed = []
+  str.size.times { reversed << split_str.pop }
+  reversed.join
 end
-puts reverse_string("hello")
